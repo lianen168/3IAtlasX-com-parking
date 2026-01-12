@@ -3,164 +3,788 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3IAtlasX.com — Interstellar Premium Domain For Sale</title>
-    <meta name="description" content="Premium domain 3IAtlasX.com inspired by the mysterious interstellar comet 3I/ATLAS. A unique name evoking intelligence, discovery, and extraterrestrial origins. For sale: $3,690 USD (3 installments available).">
+    <title>3IAtlasX.com | Interstellar Intelligence Atlas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@300;400&display=swap');
-
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: radial-gradient(ellipse at center, #0b0d2a 0%, #000000 100%);
-            color: #e0e7ff;
-            font-family: 'Exo 2', sans-serif;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+        :root {
+            --cosmic-blue: #0a1128;
+            --nebula-purple: #6c5ce7;
+            --alien-green: #00ff9d;
+            --star-gold: #fdcb6e;
+            --dark-matter: #1a1a2e;
+            --pulsar-pink: #e84393;
         }
-
-        /* 星空背景粒子效果 */
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: 
+                linear-gradient(135deg, var(--cosmic-blue) 0%, var(--dark-matter) 100%),
+                radial-gradient(circle at 30% 20%, rgba(108, 92, 231, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(0, 255, 157, 0.05) 0%, transparent 50%);
+            color: #e0f7ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+            font-family: 'Exo 2', sans-serif;
+        }
+        
+        /* 星空背景 */
         .stars {
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: transparent;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        /* 神秘脉冲效果 */
+        @keyframes cosmicPulse {
+            0%, 100% { 
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.6;
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes alienGlow {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 10px var(--alien-green),
+                    0 0 20px var(--alien-green),
+                    0 0 30px rgba(0, 255, 157, 0.5);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 20px var(--alien-green),
+                    0 0 40px var(--alien-green),
+                    0 0 60px rgba(0, 255, 157, 0.7);
+            }
+        }
+        
+        @keyframes nebulaFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(120deg); }
+            66% { transform: translateY(5px) rotate(240deg); }
+        }
+        
+        @keyframes dataStream {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            100% { transform: translateX(100%) translateY(100%); }
+        }
+        
+        @keyframes alienSignal {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.3; }
         }
 
-        .stars::before, .stars::after {
+        header {
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0, 255, 157, 0.2);
+        }
+        
+        .alien-signal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 157, 0.1) 0%, transparent 70%);
+            animation: alienSignal 4s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        .domain-display {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .domain-main {
+            font-size: 5rem;
+            font-weight: 900;
+            color: transparent;
+            background: linear-gradient(45deg, var(--alien-green), var(--nebula-purple), var(--star-gold));
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-size: 200% 200%;
+            animation: alienGlow 3s ease-in-out infinite, dataStream 10s linear infinite;
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 2px;
+            position: relative;
+            text-shadow: 
+                0 0 30px rgba(0, 255, 157, 0.3),
+                0 0 60px rgba(108, 92, 231, 0.2);
+        }
+        
+        .domain-subtitle {
+            font-size: 1.4rem;
+            color: var(--alien-green);
+            background: rgba(0, 255, 157, 0.1);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .domain-subtitle::before {
             content: '';
             position: absolute;
-            width: 2px;
-            height: 2px;
-            background: #fff;
-            border-radius: 50%;
-            box-shadow: 
-                50px 30px #fff, 120px 80px #fff, 200px 150px #fff,
-                300px 50px #fff, 400px 200px #fff, 550px 100px #fff,
-                650px 180px #fff, 750px 30px #fff, 800px 140px #fff,
-                900px 90px #fff, 100px 250px #fff, 350px 220px #fff,
-                450px 120px #fff, 600px 250px #fff, 700px 170px #fff;
-            animation: twinkle 8s infinite alternate;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 157, 0.2), transparent);
+            animation: dataStream 3s linear infinite;
         }
-
-        .stars::after {
-            width: 1px;
-            height: 1px;
-            box-shadow: 
-                80px 160px #fff, 180px 60px #fff, 280px 220px #fff,
-                380px 100px #fff, 480px 250px #fff, 580px 80px #fff,
-                680px 200px #fff, 780px 120px #fff, 880px 180px #fff;
-            animation: twinkle 12s infinite alternate-reverse;
+        
+        .tagline {
+            font-size: 1.5rem;
+            color: #aaccff;
+            max-width: 800px;
+            margin: 1rem auto;
+            line-height: 1.6;
+            font-weight: 300;
         }
-
-        @keyframes twinkle {
-            0% { opacity: 0.3; }
-            100% { opacity: 1; }
-        }
-
-        /* 彗星尾巴效果（中心向外发光） */
-        .comet-glow {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(100,255,255,0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 10s infinite alternate;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.4; }
-            100% { transform: scale(1.2); opacity: 0.7; }
-        }
-
-        .container {
-            text-align: center;
-            z-index: 10;
-            max-width: 900px;
-            padding: 40px;
-            background: rgba(10, 15, 40, 0.4);
-            border-radius: 20px;
-            border: 1px solid rgba(100, 255, 255, 0.3);
-            box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
-        }
-
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 4.5rem;
-            margin: 0 0 20px;
-            color: #64ffff;
-            text-shadow: 0 0 20px rgba(100, 255, 255, 0.8);
-            letter-spacing: 8px;
-        }
-
-        p {
-            font-size: 1.4rem;
-            margin: 20px 0;
-            line-height: 1.8;
-            color: #b0c4ff;
-        }
-
-        .price {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
-            color: #00ffea;
-            text-shadow: 0 0 15px #00ffea;
-            margin: 40px 0;
-        }
-
-        .installments {
-            font-size: 1.6rem;
-            color: #a0ffa0;
-            margin: 20px 0;
-        }
-
-        .cta-button {
+        
+        .comet-badge {
             display: inline-block;
-            margin: 30px 15px;
-            padding: 16px 40px;
-            font-size: 1.4rem;
-            font-family: 'Orbitron', sans-serif;
-            color: #000;
-            background: linear-gradient(45deg, #00ffea, #64ffff);
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 0 20px rgba(0, 255, 234, 0.6);
+            font-size: 1.2rem;
+            color: var(--star-gold);
+            background: rgba(253, 203, 110, 0.1);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            margin-top: 1rem;
+            border: 1px solid rgba(253, 203, 110, 0.3);
+            font-family: 'Orbitron', monospace;
+            animation: nebulaFloat 6s ease-in-out infinite;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .mystery-box, .acquisition-box {
+            background: rgba(26, 26, 46, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 255, 157, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                inset 0 0 50px rgba(0, 255, 157, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        
+        .mystery-box:hover, .acquisition-box:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 157, 0.4);
+            box-shadow: 
+                0 25px 50px rgba(0, 255, 157, 0.1),
+                inset 0 0 60px rgba(0, 255, 157, 0.1);
+        }
+        
+        .mystery-box::before, .acquisition-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--alien-green), var(--nebula-purple), var(--pulsar-pink));
+            background-size: 200% 100%;
+            animation: dataStream 2s linear infinite;
+        }
+        
+        .alien-glyph {
+            position: absolute;
+            font-size: 3rem;
+            color: rgba(0, 255, 157, 0.1);
+            animation: nebulaFloat 10s linear infinite;
+            z-index: -1;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--alien-green);
+            margin-bottom: 1.5rem;
+            font-family: 'Orbitron', monospace;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            color: var(--nebula-purple);
+            margin: 2rem 0 1rem;
+            font-family: 'Orbitron', monospace;
+            border-bottom: 2px solid rgba(108, 92, 231, 0.3);
+            padding-bottom: 0.5rem;
+        }
+        
+        .comet-description {
+            background: rgba(10, 17, 40, 0.5);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--alien-green);
+            position: relative;
+        }
+        
+        .comet-description::before {
+            content: '🌀';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 2rem;
+            background: var(--cosmic-blue);
+            padding: 0 10px;
+        }
+        
+        .fact-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .fact-list li {
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            background: rgba(0, 255, 157, 0.05);
+            border-radius: 10px;
+            border-left: 3px solid var(--alien-green);
+            display: flex;
+            align-items: center;
+            gap: 15px;
             transition: all 0.3s;
         }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 255, 234, 0.9);
+        
+        .fact-list li:hover {
+            background: rgba(0, 255, 157, 0.1);
+            transform: translateX(5px);
         }
-
-        .contact {
-            margin-top: 50px;
+        
+        .fact-list i {
+            color: var(--alien-green);
             font-size: 1.2rem;
-            color: #88ccff;
+        }
+        
+        /* 概念网格 */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .concept-card {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(40, 40, 60, 0.8));
+            border-radius: 15px;
+            padding: 1.8rem;
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .concept-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--alien-green);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .concept-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--alien-green), var(--nebula-purple));
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--alien-green);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.8rem;
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .card-desc {
+            font-size: 0.95rem;
+            color: #aaccff;
+            line-height: 1.5;
+            text-align: center;
+        }
+        
+        /* 购买区域 */
+        .price-display {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .full-price {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            margin: 1rem 0;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .full-price span {
+            background: linear-gradient(45deg, var(--alien-green), var(--star-gold));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+        }
+        
+        .payment-plan {
+            font-size: 1.6rem;
+            color: var(--alien-green);
+            margin: 1.5rem 0;
+            font-weight: 600;
+        }
+        
+        .payment-breakdown {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+        
+        .payment-phase {
+            background: rgba(0, 255, 157, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid rgba(0, 255, 157, 0.2);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .payment-phase:hover {
+            transform: translateY(-5px);
+            border-color: var(--alien-green);
+            background: rgba(0, 255, 157, 0.1);
+        }
+        
+        .phase-number {
+            font-size: 1.1rem;
+            color: #aaccff;
+            margin-bottom: 0.5rem;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .phase-amount {
+            font-size: 1.8rem;
+            color: var(--alien-green);
+            font-weight: 800;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        /* Spaceship交易框 */
+        .spaceship-box {
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(0, 255, 157, 0.1));
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid rgba(108, 92, 231, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .spaceship-box::before {
+            content: '🚀';
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.2;
+            animation: nebulaFloat 8s ease-in-out infinite;
+        }
+        
+        .spaceship-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .spaceship-header i {
+            color: var(--nebula-purple);
+            font-size: 2rem;
+        }
+        
+        .spaceship-title {
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .spaceship-link {
+            display: block;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--alien-green);
+            font-family: 'Orbitron', monospace;
+            word-break: break-all;
+            transition: all 0.3s;
+        }
+        
+        .spaceship-link:hover {
+            background: rgba(0, 0, 0, 0.5);
+            transform: translateX(5px);
+        }
+        
+        .spaceship-link a {
+            color: var(--alien-green);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        .spaceship-link a:hover {
+            text-decoration: underline;
+            color: var(--star-gold);
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--pulsar-pink);
+        }
+        
+        .contact-info a {
+            color: var(--alien-green);
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+            color: var(--star-gold);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1.3rem 3rem;
+            background: linear-gradient(45deg, var(--alien-green), var(--nebula-purple));
+            color: var(--cosmic-blue);
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 12px;
+            margin: 1rem 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 255, 157, 0.4);
+            color: var(--cosmic-blue);
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            color: #8899cc;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0, 255, 157, 0.1);
+            margin-top: 3rem;
+            background: rgba(10, 17, 40, 0.8);
+        }
+        
+        .footer-links a {
+            color: var(--alien-green);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .footer-links a:hover {
+            color: var(--star-gold);
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 1100px) {
+            main { grid-template-columns: 1fr; }
+            .concept-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .domain-main { font-size: 3.5rem; }
+            .domain-subtitle { font-size: 1.1rem; padding: 0.6rem 1.5rem; }
+            .tagline { font-size: 1.2rem; }
+            .concept-grid { grid-template-columns: 1fr; }
+            .full-price { font-size: 3rem; }
+            .payment-breakdown { grid-template-columns: 1fr; }
+            .button-group { flex-direction: column; align-items: center; }
+            .cta-button { width: 100%; max-width: 300px; margin: 0.5rem 0; }
         }
     </style>
 </head>
 <body>
-    <div class="stars"></div>
-    <div class="comet-glow"></div>
-
-    <div class="container">
-        <h1>3IAtlasX.com</h1>
-        <p>An interstellar premium domain inspired by the enigmatic 3I/ATLAS — the third confirmed interstellar object, whispered to carry signals of extraterrestrial intelligence.</p>
-        <p>Perfect for projects in space exploration, AI, advanced technology, or cosmic discovery.</p>
-
-        <div class="price">$3,690 USD</div>
-        <div class="installments">Flexible payment: Available in 3 installments via Lease-to-Own</div>
-
-        <a href="https://www.spaceship.com/domains/3iatlasx.com" class="cta-button" target="_blank">Buy Now on Spaceship</a>
-        <a href="mailto:joshua369x@gmail.com" class="cta-button">Contact Owner</a>
-
-        <div class="contact">
-            Inquiries: <a href="mailto:joshua369x@gmail.com" style="color:#64ffff;">joshua369x@gmail.com</a>
+    <!-- 动态星空背景 -->
+    <div class="stars" id="stars"></div>
+    
+    <header>
+        <div class="alien-signal"></div>
+        
+        <div class="domain-display">
+            <h1 class="domain-main">3IATLASX.COM</h1>
         </div>
-    </div>
+        
+        <div class="domain-subtitle">INTERSTELLAR INTELLIGENCE ATLAS</div>
+        <p class="tagline">The cosmic coordinates for humanity's most profound extraterrestrial discovery. 'Oumuamua's successor awaits your command.</p>
+        <div class="comet-badge">3I/ATLAS-X COMET DOMAIN</div>
+    </header>
+
+    <main>
+        <section class="mystery-box">
+            <div class="alien-glyph" style="top: 20px; left: 30px;">🜨</div>
+            <div class="alien-glyph" style="bottom: 40px; right: 50px;">♆</div>
+            
+            <h2><i class="fas fa-satellite"></i> THE COSMIC ENIGMA</h2>
+            
+            <div class="comet-description">
+                <p><strong>3I/ATLAS-X</strong> represents the next generation of interstellar objects—suspected artificial constructs visiting our solar system from deep space. This domain captures the convergence of three 'I's:</p>
+                
+                <ul class="fact-list">
+                    <li><i class="fas fa-rocket"></i> <strong>Interstellar</strong> - Originating from beyond our solar system</li>
+                    <li><i class="fas fa-brain"></i> <strong>Intelligent</strong> - Exhibiting non-gravitational acceleration and anomalous properties</li>
+                    <li><i class="fas fa-eye"></i> <strong>Investigative</strong> - The subject of serious scientific inquiry into extraterrestrial technology</li>
+                </ul>
+            </div>
+            
+            <h3><i class="fas fa-compass"></i> DOMAIN SIGNIFICANCE</h3>
+            <p>3IAtlasX.com serves as the digital nexus for:</p>
+            
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <div class="card-icon"><i class="fas fa-user-astronaut"></i></div>
+                    <div class="card-title">SETI Research</div>
+                    <div class="card-desc">Search for Extraterrestrial Intelligence programs and data analysis</div>
+                </div>
+                
+                <div class="concept-card">
+                    <div class="card-icon"><i class="fas fa-chart-network"></i></div>
+                    <div class="card-title">Astroinformatics</div>
+                    <div class="card-desc">Advanced data processing of anomalous celestial objects</div>
+                </div>
+                
+                <div class="concept-card">
+                    <div class="card-icon"><i class="fas fa-book"></i></div>
+                    <div class="card-title">Cosmic Archives</div>
+                    <div class="card-desc">Repository of interstellar object observations and research</div>
+                </div>
+                
+                <div class="concept-card">
+                    <div class="card-icon"><i class="fas fa-vr-cardboard"></i></div>
+                    <div class="card-title">Exo-Civilization Studies</div>
+                    <div class="card-desc">Academic exploration of potential alien technologies</div>
+                </div>
+            </div>
+            
+            <h3><i class="fas fa-star-and-crescent"></i> THE ATLAS CONNECTION</h3>
+            <p>The Asteroid Terrestrial-impact Last Alert System (ATLAS) discovered this object, marking it as part of humanity's early warning system for near-Earth objects—and potential interstellar visitors.</p>
+        </section>
+
+        <section class="acquisition-box">
+            <div class="alien-glyph" style="top: 60px; right: 40px;">♇</div>
+            
+            <h2><i class="fas fa-meteor"></i> ACQUIRE THE COSMIC COORDINATES</h2>
+            
+            <div class="price-display">
+                <div class="full-price">$<span>3,690</span></div>
+                <div class="payment-plan">Flexible Payment: 3 Payments of $1,230</div>
+                
+                <div class="payment-breakdown">
+                    <div class="payment-phase">
+                        <div class="phase-number">PHASE 1</div>
+                        <div class="phase-amount">$1,230</div>
+                    </div>
+                    <div class="payment-phase">
+                        <div class="phase-number">PHASE 2</div>
+                        <div class="phase-amount">$1,230</div>
+                    </div>
+                    <div class="payment-phase">
+                        <div class="phase-number">PHASE 3</div>
+                        <div class="phase-amount">$1,230</div>
+                    </div>
+                </div>
+                
+                <p><em>No astronomical fees • Immediate stellar access • Full cosmic ownership upon completion</em></p>
+            </div>
+
+            <!-- Spaceship交易框 -->
+            <div class="spaceship-box">
+                <div class="spaceship-header">
+                    <i class="fas fa-rocket"></i>
+                    <div class="spaceship-title">Secure Acquisition via Spaceship.com</div>
+                </div>
+                
+                <p>Interstellar transaction secured through Earth's premier domain platform. Safe escrow, instant transfer, and professional support.</p>
+                
+                <div class="spaceship-link">
+                    <strong>Direct Cosmic Purchase Link:</strong><br>
+                    <a href="https://www.spaceship.com/domains/3iatlasx.com" target="_blank">https://www.spaceship.com/domains/3iatlasx.com</a>
+                </div>
+                
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <strong>Cosmic inquiries:</strong> Contact for questions or stellar offers: <a href="mailto:joshua369x@gmail.com">joshua369x@gmail.com</a></p>
+                </div>
+                
+                <div class="button-group">
+                    <a href="https://www.spaceship.com/domains/3iatlasx.com" class="cta-button" target="_blank">
+                        <i class="fas fa-rocket"></i> LAUNCH ACQUISITION
+                    </a>
+                    
+                    <a href="mailto:joshua369x@gmail.com" class="cta-button">
+                        <i class="fas fa-satellite-dish"></i> CONTACT EXPLORER
+                    </a>
+                </div>
+                
+                <div style="margin-top: 2rem; text-align: center;">
+                    <p><i class="fas fa-info-circle"></i> This domain represents a unique intersection of astronomy, exobiology, and digital frontier.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 3IAtlasX.com | The digital coordinates for interstellar intelligence research.</p>
+        <p class="footer-links">
+            <a href="#privacy">Cosmic Privacy</a> |
+            <a href="#terms">Stellar Terms</a> |
+            <a href="mailto:joshua369x@gmail.com">Contact Explorer</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.8rem; color: #6677aa; font-family: 'Orbitron', monospace;">
+            3I/ATLAS-X: Interstellar • Intelligent • Investigative
+        </p>
+    </footer>
+
+    <script>
+        // 生成星空背景
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                // 随机位置
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // 随机大小
+                const size = Math.random() * 2 + 0.5;
+                
+                // 随机动画时长
+                const duration = Math.random() * 3 + 2;
+                
+                star.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}%;
+                    top: ${y}%;
+                    --duration: ${duration}s;
+                    animation-delay: ${Math.random() * 5}s;
+                `;
+                
+                starsContainer.appendChild(star);
+            }
+            
+            // 添加一些闪烁效果更强的星星
+            for (let i = 0; i < 20; i++) {
+                const brightStar = document.createElement('div');
+                brightStar.className = 'star';
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 3 + 1;
+                
+                brightStar.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}%;
+                    top: ${y}%;
+                    background: #fff;
+                    box-shadow: 0 0 ${size * 2}px #fff;
+                    --duration: ${Math.random() + 0.5}s;
+                `;
+                
+                starsContainer.appendChild(brightStar);
+            }
+        });
+    </script>
 </body>
 </html>
