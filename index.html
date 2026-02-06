@@ -385,49 +385,11 @@
             text-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
         }
         
-        .payment-plan {
+        .payment-note {
             font-size: 1.6rem;
             color: var(--alien-green);
             margin: 1.5rem 0;
             font-weight: 600;
-        }
-        
-        .payment-breakdown {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 2.5rem 0;
-        }
-        
-        .payment-phase {
-            background: rgba(0, 255, 157, 0.05);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            border: 2px solid rgba(0, 255, 157, 0.2);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .payment-phase:hover {
-            transform: translateY(-5px);
-            border-color: var(--alien-green);
-            background: rgba(0, 255, 157, 0.1);
-        }
-        
-        .phase-number {
-            font-size: 1.1rem;
-            color: #aaccff;
-            margin-bottom: 0.5rem;
-            font-family: 'Orbitron', monospace;
-        }
-        
-        .phase-amount {
-            font-size: 1.8rem;
-            color: var(--alien-green);
-            font-weight: 800;
-            font-family: 'Orbitron', monospace;
         }
         
         /* Spaceship交易框 */
@@ -505,17 +467,21 @@
             border-left: 4px solid var(--pulsar-pink);
         }
         
-        .contact-info a {
+        .email {
             color: var(--alien-green);
             font-weight: bold;
-            text-decoration: none;
             font-size: 1.2rem;
             font-family: 'Orbitron', monospace;
+            cursor: pointer;
+            text-decoration: underline;
         }
         
-        .contact-info a:hover {
-            text-decoration: underline;
+        .copied {
+            display: none;
             color: var(--star-gold);
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 1rem;
         }
         
         .cta-button {
@@ -585,7 +551,6 @@
             .tagline { font-size: 1.2rem; }
             .concept-grid { grid-template-columns: 1fr; }
             .full-price { font-size: 3rem; }
-            .payment-breakdown { grid-template-columns: 1fr; }
             .button-group { flex-direction: column; align-items: center; }
             .cta-button { width: 100%; max-width: 300px; margin: 0.5rem 0; }
         }
@@ -663,25 +628,10 @@
             <h2><i class="fas fa-meteor"></i> ACQUIRE THE COSMIC COORDINATES</h2>
             
             <div class="price-display">
-                <div class="full-price">$<span>3,690</span></div>
-                <div class="payment-plan">Flexible Payment: 3 Payments of $1,230</div>
+                <div class="full-price">$<span>369</span></div>
+                <div class="payment-note">One-time payment • Immediate stellar access</div>
                 
-                <div class="payment-breakdown">
-                    <div class="payment-phase">
-                        <div class="phase-number">PHASE 1</div>
-                        <div class="phase-amount">$1,230</div>
-                    </div>
-                    <div class="payment-phase">
-                        <div class="phase-number">PHASE 2</div>
-                        <div class="phase-amount">$1,230</div>
-                    </div>
-                    <div class="payment-phase">
-                        <div class="phase-number">PHASE 3</div>
-                        <div class="phase-amount">$1,230</div>
-                    </div>
-                </div>
-                
-                <p><em>No astronomical fees • Immediate stellar access • Full cosmic ownership upon completion</em></p>
+                <p><em>No astronomical fees • Instant transfer • Full cosmic ownership</em></p>
             </div>
 
             <!-- Spaceship交易框 -->
@@ -695,15 +645,18 @@
                 
                 <div class="spaceship-link">
                     <strong>Direct Cosmic Purchase Link:</strong><br>
-                    <a href="https://www.spaceship.com/domains/3iatlasx.com" target="_blank">https://www.spaceship.com/domains/3iatlasx.com</a>
+                    <a href="https://www.spaceship.com/s/buy/3iatlasx.com/tML0z7qVwYlRUYNl" target="_blank">https://www.spaceship.com/s/buy/3iatlasx.com/tML0z7qVwYlRUYNl</a>
                 </div>
                 
                 <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> <strong>Cosmic inquiries:</strong> Contact for questions or stellar offers: <a href="mailto:joshua369x@gmail.com">joshua369x@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <strong>Cosmic inquiries:</strong> Contact for questions or stellar offers: 
+                        <span class="email" id="email">joshua369x@gmail.com</span>
+                        <span class="copied" id="copied">Copied!</span>
+                    </p>
                 </div>
                 
                 <div class="button-group">
-                    <a href="https://www.spaceship.com/domains/3iatlasx.com" class="cta-button" target="_blank">
+                    <a href="https://www.spaceship.com/s/buy/3iatlasx.com/tML0z7qVwYlRUYNl" class="cta-button" target="_blank">
                         <i class="fas fa-rocket"></i> LAUNCH ACQUISITION
                     </a>
                     
@@ -741,14 +694,9 @@
                 const star = document.createElement('div');
                 star.className = 'star';
                 
-                // 随机位置
                 const x = Math.random() * 100;
                 const y = Math.random() * 100;
-                
-                // 随机大小
                 const size = Math.random() * 2 + 0.5;
-                
-                // 随机动画时长
                 const duration = Math.random() * 3 + 2;
                 
                 star.style.cssText = `
@@ -763,7 +711,6 @@
                 starsContainer.appendChild(star);
             }
             
-            // 添加一些闪烁效果更强的星星
             for (let i = 0; i < 20; i++) {
                 const brightStar = document.createElement('div');
                 brightStar.className = 'star';
@@ -784,6 +731,14 @@
                 
                 starsContainer.appendChild(brightStar);
             }
+        });
+
+        // 邮箱点击复制
+        document.getElementById('email').addEventListener('click', function() {
+            navigator.clipboard.writeText('joshua369x@gmail.com');
+            const copied = document.getElementById('copied');
+            copied.style.display = 'inline';
+            setTimeout(() => { copied.style.display = 'none'; }, 2000);
         });
     </script>
 </body>
