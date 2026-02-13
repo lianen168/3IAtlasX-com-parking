@@ -3,743 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3IAtlasX.com | Interstellar Intelligence Atlas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
+    <title>3IAtlasX.com | The Intersection of Interstellar Mystery & Infinite Future</title>
+    <meta name="description" content="Premium Domain For Sale: 3IAtlasX.com. Explore the convergence of the 3rd Interstellar Visitor (3I/Atlas), Alien Tech, and the X-Factor of the Unknown. Asking Price: $369.">
+    <meta name="keywords" content="3IAtlas, 3I/Atlas, Interstellar Object, Alien Spacecraft, Comet Atlas, X-Factor, Future Tech, Space Domain, Domain For Sale, 3IAtlasX">
+    <meta name="author" content="Joshua">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="3IAtlasX.com - Unlock the Mystery">
+    <meta property="og:description" content="Own the digital gateway to the 3rd Interstellar Object phenomenon. [...](asc_slot://start-slot-5)3I/Atlas + X. Price: $369.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://3iatlasx.com">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+
+    [...](asc_slot://start-slot-7)<style>
         :root {
-            --cosmic-blue: #0a1128;
-            --nebula-purple: #6c5ce7;
-            --alien-green: #00ff9d;
-            --star-gold: #fdcb6e;
-            --dark-matter: #1a1a2e;
-            --pulsar-pink: #e84393;
+            --primary-color: #00f3ff; /* Cyan - Comet/Ice */
+            --secondary-color: #bc13fe; /* Purple - Mystery/X */
+            --bg-color: #050505;
+            --card-bg: #0a0a0f;
+            --text-color: #e0e0e0;
         }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Particles Background Simulation */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
             background: 
-                linear-gradient(135deg, var(--cosmic-blue) 0%, var(--dark-matter) 100%),
-                radial-gradient(circle at 30% 20%, rgba(108, 92, 231, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(0, 255, 157, 0.05) 0%, transparent 50%);
-            color: #e0f7ff;
-            min-height: 100vh;
+                radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 160px 120px, #fff, rgba(0,0,0,0));
+            background-size: 200px 200px;
+            animation: starMove 100s linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes starMove {
+            from { transform: translateY(0); }
+            to { transform: translateY(-1000px); }
+        }
+
+        /* Header / Hero Section */
+        header {
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
-            overflow-x: hidden;
-            position: relative;
-            font-family: 'Exo 2', sans-serif;
-        }
-        
-        /* 星空背景 */
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .star {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle var(--duration) infinite ease-in-out;
-        }
-        
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.2; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-        
-        /* 神秘脉冲效果 */
-        @keyframes cosmicPulse {
-            0%, 100% { 
-                opacity: 0.3;
-                transform: scale(1);
-            }
-            50% { 
-                opacity: 0.6;
-                transform: scale(1.05);
-            }
-        }
-        
-        @keyframes alienGlow {
-            0%, 100% { 
-                text-shadow: 
-                    0 0 10px var(--alien-green),
-                    0 0 20px var(--alien-green),
-                    0 0 30px rgba(0, 255, 157, 0.5);
-            }
-            50% { 
-                text-shadow: 
-                    0 0 20px var(--alien-green),
-                    0 0 40px var(--alien-green),
-                    0 0 60px rgba(0, 255, 157, 0.7);
-            }
-        }
-        
-        @keyframes nebulaFloat {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            33% { transform: translateY(-10px) rotate(120deg); }
-            66% { transform: translateY(5px) rotate(240deg); }
-        }
-        
-        @keyframes dataStream {
-            0% { transform: translateX(-100%) translateY(-100%); }
-            100% { transform: translateX(100%) translateY(100%); }
-        }
-        
-        @keyframes alienSignal {
-            0%, 100% { opacity: 0.1; }
-            50% { opacity: 0.3; }
-        }
-
-        header {
-            padding: 4rem 2rem 3rem;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 2rem;
             position: relative;
-            overflow: hidden;
-            border-bottom: 1px solid rgba(0, 255, 157, 0.2);
-        }
-        
-        .alien-signal {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 255, 157, 0.1) 0%, transparent 70%);
-            animation: alienSignal 4s ease-in-out infinite;
-            z-index: -1;
-        }
-        
-        .domain-display {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-        
-        .domain-main {
-            font-size: 5rem;
-            font-weight: 900;
-            color: transparent;
-            background: linear-gradient(45deg, var(--alien-green), var(--nebula-purple), var(--star-gold));
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-size: 200% 200%;
-            animation: alienGlow 3s ease-in-out infinite, dataStream 10s linear infinite;
-            font-family: 'Orbitron', monospace;
-            letter-spacing: 2px;
-            position: relative;
-            text-shadow: 
-                0 0 30px rgba(0, 255, 157, 0.3),
-                0 0 60px rgba(108, 92, 231, 0.2);
-        }
-        
-        .domain-subtitle {
-            font-size: 1.4rem;
-            color: var(--alien-green);
-            background: rgba(0, 255, 157, 0.1);
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            display: inline-block;
-            margin: 1.5rem 0;
-            border: 1px solid rgba(0, 255, 157, 0.3);
-            font-family: 'Orbitron', monospace;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .domain-subtitle::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 157, 0.2), transparent);
-            animation: dataStream 3s linear infinite;
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            color: #aaccff;
-            max-width: 800px;
-            margin: 1rem auto;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-        
-        .comet-badge {
-            display: inline-block;
-            font-size: 1.2rem;
-            color: var(--star-gold);
-            background: rgba(253, 203, 110, 0.1);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            margin-top: 1rem;
-            border: 1px solid rgba(253, 203, 110, 0.3);
-            font-family: 'Orbitron', monospace;
-            animation: nebulaFloat 6s ease-in-out infinite;
         }
 
-        main {
-            flex: 1;
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-        
-        .mystery-box, .acquisition-box {
-            background: rgba(26, 26, 46, 0.7);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 255, 157, 0.2);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.5),
-                inset 0 0 50px rgba(0, 255, 157, 0.05);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s;
-        }
-        
-        .mystery-box:hover, .acquisition-box:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 255, 157, 0.4);
-            box-shadow: 
-                0 25px 50px rgba(0, 255, 157, 0.1),
-                inset 0 0 60px rgba(0, 255, 157, 0.1);
-        }
-        
-        .mystery-box::before, .acquisition-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--alien-green), var(--nebula-purple), var(--pulsar-pink));
-            background-size: 200% 100%;
-            animation: dataStream 2s linear infinite;
-        }
-        
-        .alien-glyph {
-            position: absolute;
-            font-size: 3rem;
-            color: rgba(0, 255, 157, 0.1);
-            animation: nebulaFloat 10s linear infinite;
-            z-index: -1;
-        }
-        
-        h2 {
-            font-size: 2.2rem;
-            color: var(--alien-green);
-            margin-bottom: 1.5rem;
-            font-family: 'Orbitron', monospace;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        h3 {
-            font-size: 1.6rem;
-            color: var(--nebula-purple);
-            margin: 2rem 0 1rem;
-            font-family: 'Orbitron', monospace;
-            border-bottom: 2px solid rgba(108, 92, 231, 0.3);
-            padding-bottom: 0.5rem;
-        }
-        
-        .comet-description {
-            background: rgba(10, 17, 40, 0.5);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border-left: 4px solid var(--alien-green);
-            position: relative;
-        }
-        
-        .comet-description::before {
-            content: '🌀';
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            font-size: 2rem;
-            background: var(--cosmic-blue);
-            padding: 0 10px;
-        }
-        
-        .fact-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        
-        .fact-list li {
-            padding: 1rem;
-            margin-bottom: 0.8rem;
-            background: rgba(0, 255, 157, 0.05);
-            border-radius: 10px;
-            border-left: 3px solid var(--alien-green);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            transition: all 0.3s;
-        }
-        
-        .fact-list li:hover {
-            background: rgba(0, 255, 157, 0.1);
-            transform: translateX(5px);
-        }
-        
-        .fact-list i {
-            color: var(--alien-green);
-            font-size: 1.2rem;
-        }
-        
-        /* 概念网格 */
-        .concept-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .concept-card {
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(40, 40, 60, 0.8));
-            border-radius: 15px;
-            padding: 1.8rem;
-            border: 1px solid rgba(108, 92, 231, 0.2);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .concept-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: var(--alien-green);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-        }
-        
-        .concept-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--alien-green), var(--nebula-purple));
-        }
-        
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--alien-green);
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(3rem, 10vw, 8rem);
             margin-bottom: 1rem;
-            text-align: center;
-        }
-        
-        .card-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 0.8rem;
-            text-align: center;
-            font-family: 'Orbitron', monospace;
-        }
-        
-        .card-desc {
-            font-size: 0.95rem;
-            color: #aaccff;
-            line-height: 1.5;
-            text-align: center;
-        }
-        
-        /* 购买区域 */
-        .price-display {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .full-price {
-            font-size: 4rem;
-            font-weight: 900;
-            color: white;
-            margin: 1rem 0;
-            font-family: 'Orbitron', monospace;
-        }
-        
-        .full-price span {
-            background: linear-gradient(45deg, var(--alien-green), var(--star-gold));
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
-        }
-        
-        .payment-note {
-            font-size: 1.6rem;
-            color: var(--alien-green);
-            margin: 1.5rem 0;
-            font-weight: 600;
-        }
-        
-        /* Spaceship交易框 */
-        .spaceship-box {
-            background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(0, 255, 157, 0.1));
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border: 2px solid rgba(108, 92, 231, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .spaceship-box::before {
-            content: '🚀';
-            position: absolute;
-            top: -20px;
-            right: 20px;
-            font-size: 3rem;
-            opacity: 0.2;
-            animation: nebulaFloat 8s ease-in-out infinite;
-        }
-        
-        .spaceship-header {
+            letter-spacing: -2px;
             display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        [...](asc_slot://start-slot-9)/* 3IAtlas Effect: Comet Stream */
+        .title-part-1 {
+            background: linear-gradient(90deg, #fff, var(--primary-color), #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+        }
+
+        /* X Effect: Glitch/Pulse */
+        .title-part-2 {
+            color: var(--secondary-color);
+            position: relative;
+            animation: pulseX 2s infinite alternate;
+            text-shadow: 0 0 30px var(--secondary-color);
         }
         
-        .spaceship-header i {
-            color: var(--nebula-purple);
-            font-size: 2rem;
+        /* .com Effect: Subtle Tech Fade */
+        .title-part-3 {
+            font-size: 0.4em;
+            opacity: 0.7;
+            animation: fadeInOut 4s ease-in-out infinite;
+            color: #888;
         }
-        
-        .spaceship-title {
-            font-size: 1.8rem;
-            color: white;
+
+        .subtitle {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px auto 40px;
+            color: #aaa;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
             font-weight: 700;
-        }
-        
-        .spaceship-link {
-            display: block;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1.2rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            border-left: 4px solid var(--alien-green);
-            font-family: 'Orbitron', monospace;
-            word-break: break-all;
-            transition: all 0.3s;
-        }
-        
-        .spaceship-link:hover {
-            background: rgba(0, 0, 0, 0.5);
-            transform: translateX(5px);
-        }
-        
-        .spaceship-link a {
-            color: var(--alien-green);
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        
-        .spaceship-link a:hover {
-            text-decoration: underline;
-            color: var(--star-gold);
-        }
-        
-        .contact-info {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border-left: 4px solid var(--pulsar-pink);
-        }
-        
-        .email {
-            color: var(--alien-green);
-            font-weight: bold;
-            font-size: 1.2rem;
-            font-family: 'Orbitron', monospace;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        
-        .copied {
-            display: none;
-            color: var(--star-gold);
-            margin-left: 10px;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        
-        .cta-button {
+            color: #fff;
+            border: 2px solid var(--primary-color);
+            padding: 10px 30px;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+            margin-bottom: 30px;
             display: inline-block;
-            padding: 1.3rem 3rem;
-            background: linear-gradient(45deg, var(--alien-green), var(--nebula-purple));
-            color: var(--cosmic-blue);
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            border-radius: 12px;
-            margin: 1rem 0.5rem;
-            transition: all 0.3s;
+        }
+
+        /* CTA Buttons */
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
             border: none;
             cursor: pointer;
-            font-family: 'Orbitron', monospace;
-            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
             position: relative;
             overflow: hidden;
+            clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+        }
+
+        .btn-buy {
+            background: var(--primary-color);
+            color: #000;
+            font-weight: 900;
+        }
+
+        .btn-buy:hover {
+            background: #fff;
+            box-shadow: 0 0 30px var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        .btn-contact {
+            background: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-contact:hover {
+            background: var(--secondary-color);
+            color: #fff;
+            box-shadow: 0 0 30px var(--secondary-color);
+        }
+
+        /* Story Section */
+        .story-section {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
         }
         
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 255, 157, 0.4);
-            color: var(--cosmic-blue);
+        .story-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 20px;
         }
-        
-        .button-group {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 2rem 0;
+
+        /* Grid Section */
+        .grid-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, var(--bg-color) 0%, #0e0e14 100%);
         }
-        
+
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #fff;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s, border-color 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary-color);
+            background: rgba(188, 19, 254, 0.05);
+        }
+
+        .card h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        [...](asc_slot://start-slot-11)/* Footer */
         footer {
             text-align: center;
-            padding: 2.5rem;
-            color: #8899cc;
+            padding: 3rem;
             font-size: 0.9rem;
-            border-top: 1px solid rgba(0, 255, 157, 0.1);
-            margin-top: 3rem;
-            background: rgba(10, 17, 40, 0.8);
+            color: #555;
+            border-top: 1px solid #222;
         }
-        
-        .footer-links a {
-            color: var(--alien-green);
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 500;
-            font-family: 'Orbitron', monospace;
+
+        /* Notification Toast */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: var(--primary-color);
+            color: #000;
+            text-align: center;
+            border-radius: 4px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
         }
-        
-        .footer-links a:hover {
-            color: var(--star-gold);
-            text-decoration: underline;
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
         }
-        
-        @media (max-width: 1100px) {
-            main { grid-template-columns: 1fr; }
-            .concept-grid { grid-template-columns: repeat(2, 1fr); }
+
+        /* Animations */
+        @keyframes shine {
+            to { background-position: 200% center; }
         }
-        
+
+        @keyframes pulseX {
+            0% { opacity: 0.8; transform: scale(1); text-shadow: 0 0 10px var(--secondary-color); }
+            50% { opacity: 1; transform: scale(1.1); text-shadow: 0 0 40px var(--secondary-color), 2px 2px 0px #ff00de; }
+            100% { opacity: 0.9; transform: scale(1); text-shadow: 0 0 20px var(--secondary-color); }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .domain-main { font-size: 3.5rem; }
-            .domain-subtitle { font-size: 1.1rem; padding: 0.6rem 1.5rem; }
-            .tagline { font-size: 1.2rem; }
-            .concept-grid { grid-template-columns: 1fr; }
-            .full-price { font-size: 3rem; }
-            .button-group { flex-direction: column; align-items: center; }
-            .cta-button { width: 100%; max-width: 300px; margin: 0.5rem 0; }
+            h1 { font-size: 3.5rem; flex-direction: column; align-items: center;}
+            .title-part-3 { font-size: 0.3em; margin-top: -10px;}
         }
     </style>
 </head>
 <body>
-    <!-- 动态星空背景 -->
-    <div class="stars" id="stars"></div>
-    
-    <header>
-        <div class="alien-signal"></div>
+
+    <div class="stars"></div>
+
+    [...](asc_slot://start-slot-13)<header>
+        <h1>
+            <span class="title-part-1">3IAtlas</span>
+            <span class="title-part-2">X</span>
+            <span class="title-part-3">.com</span>
+        </h1>
         
-        <div class="domain-display">
-            <h1 class="domain-main">3IATLASX.COM</h1>
+        <p class="subtitle">
+            The Convergence of the Third Interstellar Visitor & The Infinite Unknown.<br>
+            A Domain for the Next Era of Cosmic Discovery.
+        </p>
+
+        <div class="price-tag">$369 USD</div>
+
+        <div class="cta-container">
+            <a href="javascript:void(0);" onclick="openSalesLink()" class="btn btn-buy">Buy Now</a>
+            <button onclick="copyEmail()" class="btn btn-contact">Contact Seller</button>
         </div>
-        
-        <div class="domain-subtitle">INTERSTELLAR INTELLIGENCE ATLAS</div>
-        <p class="tagline">The cosmic coordinates for humanity's most profound extraterrestrial discovery. 'Oumuamua's successor awaits your command.</p>
-        <div class="comet-badge">3I/ATLAS-X COMET DOMAIN</div>
     </header>
 
-    <main>
-        <section class="mystery-box">
-            <div class="alien-glyph" style="top: 20px; left: 30px;">🜨</div>
-            <div class="alien-glyph" style="bottom: 40px; right: 50px;">♆</div>
-            
-            <h2><i class="fas fa-satellite"></i> THE COSMIC ENIGMA</h2>
-            
-            <div class="comet-description">
-                <p><strong>3I/ATLAS-X</strong> represents the next generation of interstellar objects—suspected artificial constructs visiting our solar system from deep space. This domain captures the convergence of three 'I's:</p>
-                
-                <ul class="fact-list">
-                    <li><i class="fas fa-rocket"></i> <strong>Interstellar</strong> - Originating from beyond our solar system</li>
-                    <li><i class="fas fa-brain"></i> <strong>Intelligent</strong> - Exhibiting non-gravitational acceleration and anomalous properties</li>
-                    <li><i class="fas fa-eye"></i> <strong>Investigative</strong> - The subject of serious scientific inquiry into extraterrestrial technology</li>
-                </ul>
-            </div>
-            
-            <h3><i class="fas fa-compass"></i> DOMAIN SIGNIFICANCE</h3>
-            <p>3IAtlasX.com serves as the digital nexus for:</p>
-            
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <div class="card-icon"><i class="fas fa-user-astronaut"></i></div>
-                    <div class="card-title">SETI Research</div>
-                    <div class="card-desc">Search for Extraterrestrial Intelligence programs and data analysis</div>
-                </div>
-                
-                <div class="concept-card">
-                    <div class="card-icon"><i class="fas fa-chart-network"></i></div>
-                    <div class="card-title">Astroinformatics</div>
-                    <div class="card-desc">Advanced data processing of anomalous celestial objects</div>
-                </div>
-                
-                <div class="concept-card">
-                    <div class="card-icon"><i class="fas fa-book"></i></div>
-                    <div class="card-title">Cosmic Archives</div>
-                    <div class="card-desc">Repository of interstellar object observations and research</div>
-                </div>
-                
-                <div class="concept-card">
-                    <div class="card-icon"><i class="fas fa-vr-cardboard"></i></div>
-                    <div class="card-title">Exo-Civilization Studies</div>
-                    <div class="card-desc">Academic exploration of potential alien technologies</div>
-                </div>
-            </div>
-            
-            <h3><i class="fas fa-star-and-crescent"></i> THE ATLAS CONNECTION</h3>
-            <p>The Asteroid Terrestrial-impact Last Alert System (ATLAS) discovered this object, marking it as part of humanity's early warning system for near-Earth objects—and potential interstellar visitors.</p>
-        </section>
+    [...](asc_slot://start-slot-15)<section class="story-section">
+        <h2>The 3I / Atlas + X Thesis</h2>
+        <p>
+            **3I/Atlas** represents the "Third Interstellar" object—a celestial traveler suspected by many to be more than just a comet. It is the symbol of alien origin, ancient navigation, and cosmic destiny. [...](asc_slot://start-slot-17)<br><br>
+            **X** is the variable. The unknown. The technology we have yet to understand. The "X-Factor" that changes humanity's timeline.
+            <br><br>
+            <strong>3IAtlasX.com</strong> is the perfect digital headquarters for discussing, tracking, or monetizing the mystery of our generation.
+        </p>
+    </section>
 
-        <section class="acquisition-box">
-            <div class="alien-glyph" style="top: 60px; right: 40px;">♇</div>
-            
-            <h2><i class="fas fa-meteor"></i> ACQUIRE THE COSMIC COORDINATES</h2>
-            
-            <div class="price-display">
-                <div class="full-price">$<span>369</span></div>
-                <div class="payment-note">One-time payment • Immediate stellar access</div>
-                
-                <p><em>No astronomical fees • Instant transfer • Full cosmic ownership</em></p>
+    <section class="grid-section">
+        <h2 class="section-title">12 Dimensions of Potential</h2>
+        <div class="grid-container">
+            <!-- 12 Fields related to 3I/Atlas+x -->
+            <div class="card">
+                <h3>1. [...](asc_slot://start-slot-19)Exo-Origin Studies</h3>
+                <p>Academic and speculative platforms analyzing the artificial nature of 3I/Atlas.</p>
             </div>
-
-            <!-- Spaceship交易框 -->
-            <div class="spaceship-box">
-                <div class="spaceship-header">
-                    <i class="fas fa-rocket"></i>
-                    <div class="spaceship-title">Secure Acquisition via Spaceship.com</div>
-                </div>
-                
-                <p>Interstellar transaction secured through Earth's premier domain platform. Safe escrow, instant transfer, and professional support.</p>
-                
-                <div class="spaceship-link">
-                    <strong>Direct Cosmic Purchase Link:</strong><br>
-                    <a href="https://www.spaceship.com/s/buy/3iatlasx.com/tML0z7qVwYlRUYNl" target="_blank">https://www.spaceship.com/s/buy/3iatlasx.com/tML0z7qVwYlRUYNl</a>
-                </div>
-                
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> <strong>Cosmic inquiries:</strong> Contact for questions or stellar offers: 
-                        <span class="email" id="email">joshua369x@gmail.com</span>
-                        <span class="copied" id="copied">Copied!</span>
-                    </p>
-                </div>
-                
-                <div class="button-group">
-                    <a href="https://www.spaceship.com/s/buy/3iatlasx.com/tML0z7qVwYlRUYNl" class="cta-button" target="_blank">
-                        <i class="fas fa-rocket"></i> LAUNCH ACQUISITION
-                    </a>
-                    
-                    <a href="mailto:joshua369x@gmail.com" class="cta-button">
-                        <i class="fas fa-satellite-dish"></i> CONTACT EXPLORER
-                    </a>
-                </div>
-                
-                <div style="margin-top: 2rem; text-align: center;">
-                    <p><i class="fas fa-info-circle"></i> This domain represents a unique intersection of astronomy, exobiology, and digital frontier.</p>
-                </div>
+            <div class="card">
+                <h3>2. Interstellar Propulsion</h3>
+                <p>Next-gen "X-Drive" technology inspired by the object's hyperbolic trajectory.</p>
             </div>
-        </section>
-    </main>
+            <div class="card">
+                <h3>3. Cosmic Defense</h3>
+                <p>Global security initiatives against unidentified interstellar threats (UAPs/ISOs).</p>
+            </div>
+            <div class="card">
+                <h3>4. Deep Space Mining</h3>
+                <p>Future logistics for harvesting rare isotopes from passing interstellar bodies.</p>
+            </div>
+            <div class="card">
+                <h3>5. The X-Signal</h3>
+                <p>SETI-focused projects decoding radio bursts associated with the Atlas transit.</p>
+            </div>
+            <div class="card">
+                <h3>6. [...](asc_slot://start-slot-21)Astro-Theology</h3>
+                <p>Exploring the spiritual implications of "The Messenger" (Atlas) and the unknown (X).</p>
+            </div>
+            <div class="card">
+                <h3>7. Alien Tech Reverse-Engineering</h3>
+                <p>A hub for theoretical physics attempting to replicate observed flight anomalies.</p>
+            </div>
+            <div class="card">
+                <h3>8. Galactic Archaeology</h3>
+                <p>Viewing 3I as an ancient probe: preserving and studying cosmic heritage.</p>
+            </div>
+            <div class="card">
+                <h3>9. Space Asset Tokenization</h3>
+                <p>Web3 & Crypto integration for funding private missions to intercept 3I.</p>
+            </div>
+            <div class="card">
+                <h3>10. [...](asc_slot://start-slot-23)Metaverse Tourism</h3>
+                <p>VR/AR experiences allowing users to "land" on the comet/ship virtually.</p>
+            </div>
+            <div class="card">
+                <h3>11. Bio-Signature Analytics</h3>
+                <p>Detecting organic compounds and viral payloads (Panspermia) in the comet's tail.</p>
+            </div>
+            <div class="card">
+                <h3>12. Future-Tech VC</h3>
+                <p>Investment capital specifically for high-risk, high-reward "Moonshot X" projects.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>© 2026 3IAtlasX.com | The digital coordinates for interstellar intelligence research.</p>
-        <p class="footer-links">
-            <a href="#privacy">Cosmic Privacy</a> |
-            <a href="#terms">Stellar Terms</a> |
-            <a href="mailto:joshua369x@gmail.com">Contact Explorer</a>
-        </p>
-        <p style="margin-top: 1rem; font-size: 0.8rem; color: #6677aa; font-family: 'Orbitron', monospace;">
-            3I/ATLAS-X: Interstellar • Intelligent • Investigative
-        </p>
+        <p>&copy; 2026 3IAtlasX.com. All Rights Reserved.</p>
+        <p>This domain is available for immediate transfer via Spaceship.</p>
     </footer>
 
-    <script>
-        // 生成星空背景
-        document.addEventListener('DOMContentLoaded', function() {
-            const starsContainer = document.getElementById('stars');
-            const starCount = 150;
-            
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                
-                const x = Math.random() * 100;
-                const y = Math.random() * 100;
-                const size = Math.random() * 2 + 0.5;
-                const duration = Math.random() * 3 + 2;
-                
-                star.style.cssText = `
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${x}%;
-                    top: ${y}%;
-                    --duration: ${duration}s;
-                    animation-delay: ${Math.random() * 5}s;
-                `;
-                
-                starsContainer.appendChild(star);
-            }
-            
-            for (let i = 0; i < 20; i++) {
-                const brightStar = document.createElement('div');
-                brightStar.className = 'star';
-                
-                const x = Math.random() * 100;
-                const y = Math.random() * 100;
-                const size = Math.random() * 3 + 1;
-                
-                brightStar.style.cssText = `
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${x}%;
-                    top: ${y}%;
-                    background: #fff;
-                    box-shadow: 0 0 ${size * 2}px #fff;
-                    --duration: ${Math.random() + 0.5}s;
-                `;
-                
-                starsContainer.appendChild(brightStar);
-            }
-        });
+    <div id="toast">Email copied: joshua369x@gmail.com</div>
 
-        // 邮箱点击复制
-        document.getElementById('email').addEventListener('click', function() {
-            navigator.clipboard.writeText('joshua369x@gmail.com');
-            const copied = document.getElementById('copied');
-            copied.style.display = 'inline';
-            setTimeout(() => { copied.style.display = 'none'; }, 2000);
+    [...](asc_slot://start-slot-25)<script>
+        // Copy Email Function
+        function copyEmail() {
+            const email = 'joshua369x@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const toast = document.getElementById("toast");
+                toast.className = "show";
+                setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        // Open Spaceship Link
+        function openSalesLink() {
+            window.open('https://www.spaceship.com/s/buy/3iatlasx.com/U2KB2oPlyHcwLr7S', '_blank');
+        }
+        
+        [...](asc_slot://start-slot-27)// Dynamic Title Interaction (Subtle Parallax)
+        document.addEventListener('mousemove', (e) => {
+            const titlePart2 = document.querySelector('.title-part-2');
+            const x = (window.innerWidth - e.pageX*2) / 100;
+            const y = (window.innerHeight - e.pageY*2) / 100;
+            titlePart2.style.transform = `translateX(${x}px) translateY(${y}px) scale(1.1)`;
         });
     </script>
+
 </body>
 </html>
